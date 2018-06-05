@@ -1,0 +1,30 @@
+## YAML Template.
+---
+singleServerConfig:
+  idleConnectionTimeout: 10000
+  pingTimeout: 1000
+  connectTimeout: 1000
+  timeout: 1000
+  retryAttempts: 1
+  retryInterval: 1000
+  reconnectionTimeout: 3000
+  failedAttempts: 1
+  password: null
+  subscriptionsPerConnection: 5
+  clientName: SpringRedisTest
+  address: "redis://127.0.0.1:6379"
+  subscriptionConnectionMinimumIdleSize: 1
+  subscriptionConnectionPoolSize: 25
+  connectionMinimumIdleSize: 5
+  connectionPoolSize: 100
+  #Use database no:1 on redis server
+  database: 1 
+  dnsMonitoring: false
+  dnsMonitoringInterval: 5000
+threads: 0
+# Codec 
+# for other values, see https://github.com/redisson/redisson/wiki/4.-Data-serialization 
+codec: !<org.redisson.codec.SnappyCodec> {}
+#codec: org.redisson.codec.FstCodec
+useLinuxNativeEpoll: false
+eventLoopGroup: null
